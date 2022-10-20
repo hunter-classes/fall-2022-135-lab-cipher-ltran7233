@@ -1,8 +1,11 @@
+#gcovr
+CXXFLAGS=--coverage -g -o0
+
 main: main.o funcs.o
-	g++ -o main main.o funcs.o
+	g++ -o main --coverage -g -o0 main.o funcs.o
 
 tests: tests.o funcs.o
-	g++ -o tests tests.o funcs.o
+	g++ -o tests --coverage -g -o0 tests.o funcs.o
 
 
 

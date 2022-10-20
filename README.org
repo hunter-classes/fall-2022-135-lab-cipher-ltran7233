@@ -6,7 +6,7 @@
 
 * GitHub username: ltran7233
 
-* Notes: use gcov in this lab
+* Notes: https://gcovr.com/en/stable/getting-started.html
 
 
 
