@@ -1,12 +1,12 @@
 * Fall 2021 - Lab Cipher
 
-* Last name:
+* Last name: Tran
 
-* First name:
+* First name: Lina
 
-* GitHub username:
+* GitHub username: ltran7233
 
-* Notes:
+* Notes: use gcov in this lab
 
 
 
