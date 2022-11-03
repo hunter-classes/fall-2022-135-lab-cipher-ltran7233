@@ -10,8 +10,6 @@ tests: tests.o funcs.o
 	gcovr 2> /dev/null > /dev/null
 	gcovr --html-details coverage.html
 
-
-
 funcs.o: funcs.cpp funcs.h
 
 main.o: main.cpp funcs.h
