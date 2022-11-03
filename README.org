@@ -6,7 +6,7 @@
 
 * GitHub username: ltran7233
 
-* Notes: https://gcovr.com/en/stable/getting-started.html
+* Notes: English Letter Frequency Source: https://pi.math.cornell.edu/~mec/2003-2004/cryptography/subs/frequencies.html
 
 
 
