@@ -70,7 +70,7 @@ std::string decryptCaesar(std::string ciphertext, int rshift)
 
 std::string solve(std::string encrypted_string)
 {
-	std::vector<double> letter_freq = {8.12, 1.49, 2.71, 4.32, 12.02, 2.30, 2.03, 5.92, 7.31, 0.10, 0.69, 3.98, 2.61, 6.95, 7.68, 1.82, 0.11, 6.02, 6.28, 9.10, 2.88, 1.11, 2.09, 0.17, 2.11, 0.07} // A-Z frequency for English text
+	std::vector<double> letter_freq = {8.12, 1.49, 2.71, 4.32, 12.02, 2.30, 2.03, 5.92, 7.31, 0.10, 0.69, 3.98, 2.61, 6.95, 7.68, 1.82, 0.11, 6.02, 6.28, 9.10, 2.88, 1.11, 2.09, 0.17, 2.11, 0.07}; // A-Z frequency for English text
 	std::vector<double> string_freq;
 	double compare_dist = 0.0;
 	double best_dist = 312;
@@ -79,7 +79,7 @@ std::string solve(std::string encrypted_string)
 	{
 		string_freq = get_string_freq(encrypted_string, i);
 		compare_dist = distance(letter_freq, string_freq);
-		if (compare_dist < best_shift)
+		if (compare_dist < best_dist)
 		{
 			best_dist = compare_dist;
 			best_shift = i;
@@ -88,7 +88,7 @@ std::string solve(std::string encrypted_string)
 	return decryptCaesar(encrypted_string, best_shift);
 }
 
-double freq(std::string str, char c)
+double freq(std::string str, int c)
 {
 	int count = 0;
 	for (int i=0; i<str.length(); i++)
@@ -103,15 +103,15 @@ double freq(std::string str, char c)
 
 std::vector<double> get_string_freq(std::string str, int rshift)
 {
-	std::vector<double> freq = (26, 0.0);
+	std::vector<double> frequency(26, 0);
 	std::string shifted_str = decryptCaesar(str, rshift);
-	char start = 'A';
+	int start = 'A';
 	for (int i=0; i<26; i++)
 	{
-		freq.at(i) = freq(shifted_str, start) * 100.0;
+		frequency.at(i) = freq(shifted_str, start) * 100.0;
 		start++;
 	}
-	return freq;
+	return frequency;
 }
 
 double distance(std::vector<double> letter, std::vector<double> string)

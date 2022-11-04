@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 
 char decryptChar(char c, int rshift);
 char shiftChar(char c, int rshift);
