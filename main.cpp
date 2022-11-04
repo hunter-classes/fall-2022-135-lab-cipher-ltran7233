@@ -3,6 +3,6 @@
 
 int main()
 {
-	std::cout << solve(encryptCaesar("Piqued favour stairs it enable exeter as seeing. Remainder met improving but engrossed sincerity age. Better but length gay denied abroad are. Attachment astonished to on appearance imprudence so collecting in excellence. Tiled way blind lived whose new. The for fully had she there leave merit enjoy forth.", 10)) << std::endl; // Lorem Ipsum text
+	std::cout << solve(encryptCaesar("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.", 10)) << std::endl; // Lorem Ipsum Text
 	return 0;
 }
